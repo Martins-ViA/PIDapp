@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.Martins.pidapp.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_PID"
+        android:name="com.Martins.pidapp.ui.PID.PIDFragment"
         android:label="@string/title_pid"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_PID" />
 
     <fragment
         android:id="@+id/navigation_settings"

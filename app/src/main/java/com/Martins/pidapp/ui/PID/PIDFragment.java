@@ -1,4 +1,4 @@
-package com.Martins.pidapp.ui.dashboard;
+package com.Martins.pidapp.ui.PID;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,28 +7,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.Martins.pidapp.R;
 
-public class DashboardFragment extends Fragment {
+public class PIDFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private PIDViewModel PIDViewModel;
 
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        PIDViewModel =
+                new ViewModelProvider(this).get(PIDViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_pid, container, false);
 
         return root;
     }
@@ -116,7 +114,7 @@ public class DashboardFragment extends Fragment {
         EditText txtKi = (EditText) getActivity().findViewById(R.id.txtKi);
 
         Double val = Double.parseDouble(txtKp.toString());
-        dashboardViewModel.Kd = val;*/
+        PIDViewModel.Kd = val;*/
     }
 
     @Override
